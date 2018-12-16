@@ -2,7 +2,7 @@
 from sys import argv
 #unpack
 script, filename = argv
-fp = open(filename, "w")
-print "Writing to file %r " % fp
-fp.write("Hello World")
-fp.close()
+# A more clean and modern Python 3 to write to file.
+with open(filename, "w") as f:
+    print("Writing to file".format(f)) # As python 3+
+    f.write("Hello World")
